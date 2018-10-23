@@ -1,0 +1,406 @@
+<head>
+<link rel="stylesheet" href="css/style.css" type="text/css" media="all"/>
+<link rel="shortcut icon" type="image/png" href="./css/images/favicon.png"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 800px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 25px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.8s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+</style>
+</head>
+<body>
+<div id="shell">
+  <div id="header">
+   <br>
+   <br><!-- div for header -->
+    <h1 id="logo"><a href="index.html">WatchTrailer</a></h1>
+    <div id="navigation">
+	<tr>
+	
+	</tr>		
+      <ul><!-- unordered list-->
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="news.html">NEWS</a></li>
+        <li><a href="inthreater.html">IN THEATERS</a></li>
+        <li><a href="comingsoon.html">COMING SOON</a></li>
+        <li><a href="bookticket.html">BOOK TICKET</a></li>
+		<li><a href="contact.html">CONTACT</a></li>
+      </ul>
+    </div>
+    <div id="sub-navigation"><!-- start of div -->
+      <ul><!-- unordered list-->
+        <li><a href="#">ALL LATEST TRAILERS</a></li>
+      </ul>
+      <div id="search"><!-- div search-->
+        <form action="#" method="get" accept-charset="utf-8">
+          <label for="search-field">SEARCH</label>
+          <input type="text" name="search field" placeholder="Enter search here" id="search-field" class="blink search-field"/>
+          <input type="submit" value="GO!" class="search-button" />
+        </form>
+      </div>
+    </div>
+  </div>
+  <div id="main">
+    <div id="content">
+      <div class="box">
+        <div class="head">
+         <br>
+         <br>
+         <br>
+         <br>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="https://4.bp.blogspot.com/vltT45MwMoMSzfv6MP2CwUSGUVu0t5lWlrhCKzntTI01A0dUed28aMvxthnf4dm46vbfAk1u6VLC" style="width:100%">
+  <div class="text"><h1></h1></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="https://images0.minutemediacdn.com/production-platform/912x516/5b270545fae96fdbf3000001.jpeg" style="width:100%">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="https://zayzay.com/wp-content/uploads/2018/09/hunter-Killer-990x557.jpg" style="width:100%">
+  <div class="text"></div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 3000); // Change image every 5 seconds !
+}
+</script>
+
+<head>
+    <meta charset="utf-8">
+    <title>&sum; Movie Buzz!</title>
+
+    <!-- Bootstrap 3 -->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap-theme.min.css">
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+    <style type="text/css" media="screen">
+        body {
+            padding-top: 80px;
+        }
+        #trailer .modal-dialog {
+            margin-top: 200px;
+            width: 640px;
+            height: 480px;
+        }
+        .hanging-close {
+            position: absolute;
+            top: -12px;
+            right: -12px;
+            z-index: 9001;
+        }
+        
+           h3{
+             color:white;
+             }
+        #trailer-video {
+            width: 100%;
+            height: 100%;
+        }
+        .movie-tile {
+            margin-bottom: 20px;
+            padding-top: 20px;
+        }
+        .movie-tile:hover {
+            background-color: #EEE;
+            cursor: pointer;
+        }
+        .scale-media {
+            padding-bottom: 56.25%;
+            position: relative;
+        }
+        .scale-media iframe {
+            border: none;
+            height: 100%;
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 0;
+            background-color: #eadfdf;
+        }
+    </style>
+    <script type="text/javascript" charset="utf-8">
+        // Pause the video when the modal is closed
+        $(document).on('click', '.hanging-close, .modal-backdrop, .modal', function (event) {
+            // Remove the src so the player itself gets removed, as this is the only
+            // reliable way to ensure the video stops playing in IE
+            $("#trailer-video-container").empty();
+        });
+        // Start playing the video whenever the trailer modal is opened
+        $(document).on('click', '.movie-tile', function (event) {
+            var trailerYouTubeId = $(this).attr('data-trailer-youtube-id')
+            var sourceUrl = 'http://www.youtube.com/embed/' + trailerYouTubeId + '?autoplay=1&html5=1';
+            $("#trailer-video-container").empty().append($("<iframe></iframe>", {
+              'id': 'trailer-video',
+              'type': 'text-html',
+              'src': sourceUrl,
+              'frameborder': 0
+            }));
+        });
+        // Animate in the movies when the page loads
+        $(document).ready(function () {
+          $('.movie-tile').hide().first().show("fast", function showNext() {
+            $(this).next("div").show("fast", showNext);
+          });
+        });
+    </script>
+</head>
+
+  <body>
+    <!-- Trailer Video Modal -->
+    <div class="modal" id="trailer">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <a href="#" class="hanging-close" data-dismiss="modal" aria-hidden="true">
+            <img src="https://lh5.ggpht.com/v4-628SilF0HtHuHdu5EzxD7WRqOrrTIDi_MhEG6_qkNtUK5Wg7KPkofp_VJoF7RS2LhxwEFCO1ICHZlc-o_=s0#w=24&h=24"/>
+          </a>
+          <div class="scale-media" id="trailer-video-container">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Page Content -->
+    <div class="container">
+      <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">&reg; Movie buzz</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+          <div class="head">
+        <h3>COMING SOON<strong>!</strong></h3>
+        
+      </div>
+    <div class="containers">
+      
+           <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="FZ0QKOR5Kgc" data-toggle="modal" data-target="#trailer">
+    <img src="http://www.gstatic.com/tv/thumb/v22vodart/14791288/p14791288_v_v8_aa.jpg" width="220" height="342">
+    <h3>I kill giants</h3>
+</div>
+
+    <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="mnP_z3qXDCQ" data-toggle="modal" data-target="#trailer">
+    <img src="http://www.gstatic.com/tv/thumb/movieposters/15325196/p15325196_p_v8_ac.jpg" width="220" height="342">
+    <h3>Hunter killer</h3>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="Z1BCujX3pw8" data-toggle="modal" data-target="#trailer">
+    <img src="https://i.redd.it/ac02e53cn5v01.jpg" width="220" height="342">
+    <h3>Captian Marvel</h3>
+</div>
+
+    <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="cPNVNqn4T9I" data-toggle="modal" data-target="#trailer">
+    <img src="https://m.media-amazon.com/images/M/MV5BMjA3MTAxNDkxMl5BMl5BanBnXkFtZTgwMzI4MzE0NjM@._V1_.jpg" width="220" height="342">
+    <h3>Creed II</h3>
+</div>
+
+     
+    <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="IRsFc2gguEg" data-toggle="modal" data-target="#trailer">
+    <img src="https://m.media-amazon.com/images/M/MV5BNDkwYmE5NzEtZTAzOC00YTYzLTkyMmMtZWRhMDE1Y2UxYTMwXkEyXkFqcGdeQXVyNDg2MjUxNjM@._V1_SY1000_CR0,0,631,1000_AL_.jpg" width="220" height="342">
+    <h3>Mortal Engines</h3>
+</div>
+
+        <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="WDkg3h8PCVU" data-toggle="modal" data-target="#trailer">
+    <img src="https://pbs.twimg.com/media/DiPQxl3VAAAZKjs.jpg:large" width="220" height="342">
+    <h3>Aqua man</h3>
+</div>
+  
+
+
+  <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="Ac5wrM2uYbk" data-toggle="modal" data-target="#trailer">
+    <img src="http://www.gstatic.com/tv/thumb/v22vodart/14899468/p14899468_v_v8_ab.jpg" width="220" height="342">
+    <h3>Kin</h3>
+</div>
+           
+    
+         <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="lX71_Jcm4po" data-toggle="modal" data-target="#trailer">
+    <img src="http://www.gstatic.com/tv/thumb/movieposters/13044225/p13044225_p_v8_ac.jpg" width="220" height="342">
+    <h3>Ralph breaks the internet</h3>
+</div>
+         
+                       <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="USPd0vX2sdc" data-toggle="modal" data-target="#trailer">
+    <img src="http://cdn.collider.com/wp-content/uploads/2018/09/overlord-poster1.jpg" width="220" height="342">
+    <h3>Overlord</h3>
+</div>
+
+          <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="lcwmDAYt22k" data-toggle="modal" data-target="#trailer">
+    <img src="https://in.bmscdn.com/iedb/movies/images/website/poster/large/transformers-6-bumblebee-et00070010-29-01-2018-05-27-30.jpg" width="220" height="342">
+    <h3>Bumble bee</h3>
+</div>
+      <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="ek1ePFp-nBI" data-toggle="modal" data-target="#trailer">
+    <img src="http://www.gstatic.com/tv/thumb/movieposters/13864607/p13864607_p_v8_aa.jpg" width="220" height="342">
+    <h3>Halloween</h3>
+        </div>
+        
+        
+   
+   
+    <!-- Main Page Content -->
+    <div class="container">
+      <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">&reg; Movie buzz</a>
+          </div>
+        </div>
+      </div>
+      </div>
+      </center>
+		
+        <div id="footer"><!-- div for footer -->
+  
+			<tr>
+				<td colspan="4" height="20">
+				</td>
+			</tr>
+		</table>
+		<table border="0px" cellspacing="" cellpadding="" width="960px" height="100" background:url('images/body-bg.gif');><!-- table for link to social medias -->
+			<tr>
+				<td>
+				<center style="margin:200px 0 80px auto">
+				<a href="http://www.facebook.com/aamer.sohail.54966"><img src="css/social icons/facebook.png" height="40" width="40"></a>
+				&nbsp;&nbsp;
+				<a href="http://www.github.com/aamer09"><img src="css/social%20icons/github.png" height="40" width="40"></a>
+				&nbsp;&nbsp;
+				<a href="http://www.youtube.com"><img src="css/social icons/youtube.png" height="40" width="40"></a>
+				&nbsp;&nbsp;
+				<a href="http://www.instagram.com/aam3r77"><img src="css/social icons/instagram.png" height="40" width="40"></a>
+                    <h4 style="color:floralwhite;margin-top:25px;font-family: sans-serif;font-style:normal"> &copy; Aamer sohail | 2018</h4>
+				</center>
+				</td>
+			</tr>
+		</table>
+</div>
+	</body>
+</html>
